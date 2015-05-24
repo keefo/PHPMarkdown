@@ -1247,9 +1247,9 @@ class MarkdownExtra extends \Michelf\Markdown {
 		}
 
 		if ($ol_start > 1 && $list_type == 'ol'){
-			$result = $this->hashBlock("task:<br/><$list_type class=\"task-list\" start=\"$ol_start\">\n" . $result . "</$list_type>");
+			$result = $this->hashBlock("<$list_type class=\"task-list\" start=\"$ol_start\">\n" . $result . "</$list_type>");
 		} else {
-			$result = $this->hashBlock("task:<br/><$list_type class=\"task-list\">\n" . $result . "</$list_type>");
+			$result = $this->hashBlock("<$list_type class=\"task-list\">\n" . $result . "</$list_type>");
 		}
 		return "\n". $result ."\n\n";
 	}
