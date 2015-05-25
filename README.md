@@ -44,6 +44,25 @@ echo $html;
 ?>
 ```
 
+The output:
+
+```html
+<h1>Github flavored Markdown Test</h1>
+
+<h2>Task list</h2>
+
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" checked="checked"/>  task 1
+
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" checked="checked"/>  sub-task 1</li>
+<li class="task-list-item"><input type="checkbox" checked="checked"/>  sub-task 2 </li>
+</ul></li>
+<li class="task-list-item"><input type="checkbox" />  task 2</li>
+<li class="task-list-item"><input type="checkbox" />  task 3</li>
+</ul>
+```
+
 ## ToDo
 
 Read here <https://help.github.com/articles/github-flavored-markdown/>.
