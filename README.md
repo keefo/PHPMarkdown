@@ -11,13 +11,10 @@ based on work by John Gruber
 <http://daringfireball.net/>
 
 # This fork
-This derivation add 3 files:
+This derivation add 2 files:
 
 1. MarkdownGithub.inc.php
 2. MarkdownGithub.php
-3. Test_MarkdownGithub.php
-
-Test_MarkdownGithub.php is for testing purposes. 
 
 MarkdownGithub.inc.php and MarkdownGithub.php are the Github flavored Markdown parser.
 
