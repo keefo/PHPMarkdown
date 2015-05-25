@@ -21,7 +21,6 @@ These 2 files are the Github flavored Markdown parser.
 ## How to use
 
 ```php
-
 <?php
 
 include_once('./PHPMarkdown/MarkdownGithub.inc.php');
