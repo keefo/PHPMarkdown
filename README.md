@@ -44,7 +44,7 @@ echo $html;
 ?>
 ```
 
-# ToDo
+## ToDo
 
 Read here <https://help.github.com/articles/github-flavored-markdown/>.
 
