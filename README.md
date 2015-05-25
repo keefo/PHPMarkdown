@@ -16,7 +16,7 @@ This derivation add 2 files:
 1. MarkdownGithub.inc.php
 2. MarkdownGithub.php
 
-MarkdownGithub.inc.php and MarkdownGithub.php are the Github flavored Markdown parser.
+These 2 files are the Github flavored Markdown parser.
 
 ## How to use
 
