@@ -11,11 +11,15 @@ based on work by John Gruber
 <http://daringfireball.net/>
 
 # This fork
-This derivation add github task list parser into the MarkdownExtra.php file.
+This derivation add 3 files:
 
-- [x] task1
-- [ ] task2
-- [ ] task3
+1. MarkdownGithub.inc.php
+2. MarkdownGithub.php
+3. Test_MarkdownGithub.php
+
+Test_MarkdownGithub.php is for testing purposes. 
+
+MarkdownGithub.inc.php and MarkdownGithub.php are the Github flavored Markdown parser.
 
 ## How to use
 
