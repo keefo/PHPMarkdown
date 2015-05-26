@@ -25,7 +25,38 @@ class MarkdownGithub extends \Michelf\Markdown {
 		$this->block_gamut += array(
 			"doTaskLists"        => 35,//should less than doLists 40
 			);
+		$this->span_gamut += array(
+			"doStrikethrough"   => 55,//after doItalicsAndBold
+			);
 		parent::__construct();
+	}
+
+	protected function doStrikethrough($text) {
+		$newtext = '';
+		$lines = explode(PHP_EOL, $text);
+		$regex = '/\~\~(.*?)\~\~/';//need improvment over triple ~ case
+		foreach($lines as $line){
+			$newtext = preg_replace_callback($regex, array($this, '_doStrikethrough_callback'), $line);			
+		}
+		return $newtext;
+	}
+
+	
+	protected function _doStrikethrough_callback($matches) {
+		# Re-usable patterns to match list item bullets and number markers:
+		$orgtext = $matches[0];
+		$text = $matches[1];
+		$beg = substr($text,0,1);
+		$end = substr($text,-1);
+
+		if(strlen($text)<=0 ||
+			ctype_space($beg) ||
+			ctype_space($end) || 
+			$beg==='~' ||
+			$end==='~'){
+			return $orgtext;
+		}
+		return '<del>'.$text.'</del>';
 	}
 
 
